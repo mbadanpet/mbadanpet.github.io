@@ -1,0 +1,66 @@
+title: "Madhulika Badanpet"
+name: "Madhulika Badanpet"
+description: "Endpoint automation, Zero Trust, Fleet+osquery, Gorilla, Autopilot, compliance at scale."
+url: "https://mbadanpet.github.io"  
+baseurl:                           
+repository: mbadanpet/mbadanpet.github.io
+
+# Theme (remote)
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+
+# Build settings
+markdown: kramdown
+highlighter: rouge
+permalink: /:categories/:title/
+paginate: 5
+paginate_path: /page:num/
+
+# Plugins (all supported by GitHub Pages)
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-include-cache
+  - jekyll-paginate
+
+# Author profile (shows on About page and sidebar if enabled)
+author:
+  name: "Madhulika Badanpet"
+  avatar: "/assets/images/avatar.jpg"  # optional
+  bio: "Sr. Client Systems Engineer @ Snowflake, driving innovation in enterprise IT by combining Windows endpoint automation, Zero Trust security, and data-driven insights to transform modern endpoint management and IT operations at scale."
+  location: "USA"
+  links:
+    - label: "LinkedIn"
+      icon: "fab fa-linkedin"
+      url: "https://www.linkedin.com/in/madhulika-badanpet-a6093655/"
+    - label: "GitHub"
+      icon: "fab fa-github"
+      url: "https://github.com/mbadanpet"
+
+# Minimal Mistakes layout options
+theme_settings:
+  # optional
+
+# Taxonomies
+category_archive:
+  type: liquid
+  path: /categories/
+tag_archive:
+  type: liquid
+  path: /tags/
+
+# Navigation (uses _data/navigation.yml)
+collections:
+  posts:
+    output: true
+
+# Defaults (front matter fallbacks)
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true
+      share: true
+      comments: false  # can enable if you add a provider
