@@ -1,20 +1,39 @@
 /* ================================
    Hydejack – sidebar polish
-   File: assets/css/custom.css
+   File: assets/css/custom.scss
    ================================ */
 
-/* 1) Sidebar background: image + dark gradient for readability */
+/* 1) Sidebar background: image */
 .sidebar {
   background-image:
-    linear-gradient(rgba(0,0,0,0.72), rgba(0,0,0,0.72)),
     url("/assets/images/header.jpg") !important;
   background-size: cover !important;
-  background-position: center 18% !important; /* lift framing a bit */
+  background-position: center 18% !important;
   background-repeat: no-repeat !important;
   background-attachment: scroll !important;
+  position: relative; /* needed for overlay */
 }
 
-/* 2) Global sidebar text color + basic legibility */
+/* 2) Dark overlay gradient on top of image */
+.sidebar::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    rgba(0,0,0,0.72),
+    rgba(0,0,0,0.72)
+  );
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* 3) Ensure sidebar content sits above overlay */
+.sidebar > * {
+  position: relative;
+  z-index: 2;
+}
+
+/* 4) Global sidebar text color + legibility */
 .sidebar,
 .sidebar * {
   color: #fff !important;
@@ -27,7 +46,7 @@
   margin-bottom: 0.75rem;
 }
 
-/* 3) Headings (your name/title) – strong and crisp */
+/* 5) Headings (name/title) */
 .sidebar h1,
 .sidebar h2,
 .sidebar h3 {
@@ -39,7 +58,7 @@
   margin-bottom: 0.5rem;
 }
 
-/* 4) Navigation links (Blog / Categories / Tags / About) */
+/* 6) Navigation links */
 .sidebar nav a {
   display: block;
   font-weight: 700;
@@ -52,17 +71,12 @@
 
 .sidebar nav a:hover,
 .sidebar nav a:focus {
-  color: #ffd76a !important;     /* accent on hover */
+  color: #ffd76a !important;
   transform: translateX(2px);
   outline: none;
 }
 
-/* Optional: underline only on hover (cleaner look)
-.sidebar nav a { text-decoration: none; }
-.sidebar nav a:hover { text-decoration: underline; }
-*/
-
-/* 5) Social icons – subtle interaction */
+/* 7) Social icons */
 .sidebar .fa,
 .sidebar .fab,
 .sidebar .fas {
@@ -78,29 +92,26 @@
   opacity: 1;
 }
 
-/* 6) Thin divider tweak (optional) */
+/* 8) Thin divider */
 .sidebar hr {
   border-color: rgba(255,255,255,0.18) !important;
 }
 
-/* 7) Improve contrast for small screens (drawer mode) */
+/* 9) Small screens (drawer mode) */
 @media (max-width: 1100px) {
-  .sidebar {
-    background-image:
-      linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78)),
-      url("/assets/images/header.jpg") !important;
-    background-position: center 22% !important;
+  .sidebar::after {
+    background: linear-gradient(rgba(0,0,0,0.78), rgba(0,0,0,0.78));
   }
   .sidebar p { font-size: 0.98rem; }
 }
 
-/* 8) Accessibility: clear focus states for keyboard users */
+/* 10) Accessibility */
 .sidebar a:focus {
   outline: 2px solid #ffd76a;
   outline-offset: 2px;
 }
 
-/* 9) Ensure main content uses default theme styles (do not override) */
+/* 11) Preserve main content */
 .main,
 .content,
 .page {
