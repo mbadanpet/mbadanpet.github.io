@@ -62,3 +62,10 @@ defaults:
 
 hydejack:
   cover: /assets/images/header.jpg
+
+sass:
+  style: compressed
+
+assets:
+  sources:
+    - assets/css
