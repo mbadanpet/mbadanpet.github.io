@@ -1,23 +1,26 @@
-/* 1) Rebuild the sidebar background with a dark overlay on top of your image */
+/* Darken the sidebar image for better readability */
 .sidebar {
-  /* stack a semi-transparent black gradient over your image */
   background-image:
-    linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
+    linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)),
     url("/assets/images/header.jpg") !important;
-
   background-size: cover !important;
-  background-position: center center !important;
+  background-position: center 20% !important; /* lift framing a bit */
   background-repeat: no-repeat !important;
-  background-attachment: scroll !important;
 }
 
-/* 2) Ensure all sidebar text is white for readability */
+/* Force white text and add light weight + shadow for clarity */
 .sidebar,
-.sidebar * {
-  color: #fff !important;
+.sidebar * { color: #fff !important; }
+
+.sidebar h1, .sidebar h2, .sidebar h3 {
+  text-shadow: 0 2px 6px rgba(0,0,0,0.45);
+  font-weight: 800; /* punchier name */
 }
 
-/* Optional: tweak link hover color so it stands out */
-.sidebar a:hover {
-  color: #ffd76a !important;
+.sidebar p {
+  line-height: 1.5;
+  text-shadow: 0 2px 6px rgba(0,0,0,0.35);
 }
+
+/* Optional: brighter hover color for links/icons */
+.sidebar a:hover { color: #ffd76a !important; }
