@@ -1,33 +1,23 @@
-/* Darken the sidebar background image with a gradient */
+/* 1) Rebuild the sidebar background with a dark overlay on top of your image */
 .sidebar {
-  position: relative;
+  /* stack a semi-transparent black gradient over your image */
+  background-image:
+    linear-gradient(rgba(0,0,0,0.58), rgba(0,0,0,0.58)),
+    url("/assets/images/header.jpg") !important;
+
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  background-attachment: scroll !important;
 }
 
-.sidebar::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(
-    rgba(0, 0, 0, 0.6),   /* dark top */
-    rgba(0, 0, 0, 0.6)    /* dark bottom */
-  );
-  z-index: 0;
-}
-
-/* Ensure sidebar text and links are white and above the overlay */
+/* 2) Ensure all sidebar text is white for readability */
+.sidebar,
 .sidebar * {
-  position: relative;
-  z-index: 1;
-  color: #ffffff !important;
+  color: #fff !important;
 }
 
-.sidebar a {
-  color: #ffffff !important;
-}
-
+/* Optional: tweak link hover color so it stands out */
 .sidebar a:hover {
-  color: #ffcc00 !important; /* optional highlight color */
+  color: #ffd76a !important;
 }
