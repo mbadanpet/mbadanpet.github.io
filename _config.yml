@@ -8,6 +8,9 @@ repository: mbadanpet/mbadanpet.github.io
 # Theme (remote)
 remote_theme: "qwtel/hydejack"
 
+accent_image: /assets/images/header.jpg   
+accent_color: "rgb(79,177,186)"          
+
 # Build settings
 markdown: kramdown
 highlighter: rouge
@@ -59,11 +62,7 @@ defaults:
       read_time: true
       share: true
       comments: false  # can enable if you add a provider
-
-hydejack:
-  accent_image: /assets/images/header.jpg   
-  accent_color: "rgb(79,177,186)"          
-
+      
 sass:
   style: compressed
 
