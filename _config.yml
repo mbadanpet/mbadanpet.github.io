@@ -1,6 +1,6 @@
 title: "Madhulika Badanpet"
 name: "Madhulika Badanpet"
-description: "Endpoint automation, Zero Trust, Fleet+osquery, Gorilla, Autopilot, compliance at scale."
+description: "Sr. Client Systems Engineer @ Snowflake, driving innovation in enterprise IT by combining Windows endpoint automation, Zero Trust security, and data-driven insights to transform modern endpoint management and IT operations at scale."
 url: "https://mbadanpet.github.io"  
 baseurl: ""                           
 repository: mbadanpet/mbadanpet.github.io
@@ -30,7 +30,7 @@ author:
   picture: /assets/images/avatar.jpg
   social:
     github: mbadanpet
-    linkedin: madhulika-badanpet-a6093655
+    linkedin: https://www.linkedin.com/in/madhulika-badanpet-a6093655/
 
 # Taxonomies
 category_archive:
