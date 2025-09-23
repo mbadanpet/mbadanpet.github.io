@@ -61,7 +61,8 @@ defaults:
       comments: false  # can enable if you add a provider
 
 hydejack:
-  cover: /assets/images/header.jpg
+  accent_image: /assets/images/header.jpg   
+  accent_color: "rgb(79,177,186)"          
 
 sass:
   style: compressed
