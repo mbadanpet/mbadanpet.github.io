@@ -1,0 +1,20 @@
+/* Dark gradient overlay for header cover images */
+.cover-image::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    rgba(0, 0, 0, 0.6),   /* top: darker */
+    rgba(0, 0, 0, 0.3)    /* bottom: lighter */
+  );
+  z-index: 1;
+}
+
+/* Ensure text appears above overlay */
+.cover-image > * {
+  position: relative;
+  z-index: 2;
+}
