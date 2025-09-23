@@ -25,20 +25,12 @@ plugins:
 # Author profile (shows on About page and sidebar if enabled)
 author:
   name: "Madhulika Badanpet"
-  avatar: "/assets/images/avatar.jpg"  # optional
-  bio: "Sr. Client Systems Engineer @ Snowflake, driving innovation in enterprise IT by combining Windows endpoint automation, Zero Trust security, and data-driven insights to transform modern endpoint management and IT operations at scale."
-  location: "USA"
-  links:
-    - label: "LinkedIn"
-      icon: "fab fa-linkedin"
-      url: "https://www.linkedin.com/in/madhulika-badanpet-a6093655/"
-    - label: "GitHub"
-      icon: "fab fa-github"
-      url: "https://github.com/mbadanpet"
-
-# Minimal Mistakes layout options
-theme_settings:
-  # optional
+  email: "mbadanpet@gmail.com"
+  about: "Sr. Client Systems Engineer @ Snowflake, driving innovation in enterprise IT by combining Windows endpoint automation, Zero Trust security, and data-driven insights to transform modern endpoint management and IT operations at scale."
+  picture: /assets/images/avatar.jpg
+  social:
+    github: mbadanpet
+    linkedin: madhulika-badanpet-a6093655
 
 # Taxonomies
 category_archive:
