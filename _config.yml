@@ -50,6 +50,9 @@ tag_archive:
 
 # Navigation (uses _data/navigation.yml)
 collections:
+  pages:
+    output: true
+    permalink: /:path/
   posts:
     output: true
 
