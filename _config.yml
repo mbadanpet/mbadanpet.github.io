@@ -2,7 +2,7 @@ title: "Madhulika Badanpet"
 name: "Madhulika Badanpet"
 description: "Endpoint automation, Zero Trust, Fleet+osquery, Gorilla, Autopilot, compliance at scale."
 url: "https://mbadanpet.github.io"  
-baseurl:                           
+baseurl: ""                           
 repository: mbadanpet/mbadanpet.github.io
 
 # Theme (remote)
