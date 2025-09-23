@@ -1,5 +1,9 @@
-/* Dark gradient overlay for header cover images */
-.cover-image::before {
+/* Darken the sidebar background image with a gradient */
+.sidebar {
+  position: relative;
+}
+
+.sidebar::before {
   content: "";
   position: absolute;
   top: 0;
@@ -7,14 +11,23 @@
   width: 100%;
   height: 100%;
   background: linear-gradient(
-    rgba(0, 0, 0, 0.6),   /* top: darker */
-    rgba(0, 0, 0, 0.3)    /* bottom: lighter */
+    rgba(0, 0, 0, 0.6),   /* dark top */
+    rgba(0, 0, 0, 0.6)    /* dark bottom */
   );
-  z-index: 1;
+  z-index: 0;
 }
 
-/* Ensure text appears above overlay */
-.cover-image > * {
+/* Ensure sidebar text and links are white and above the overlay */
+.sidebar * {
   position: relative;
-  z-index: 2;
+  z-index: 1;
+  color: #ffffff !important;
+}
+
+.sidebar a {
+  color: #ffffff !important;
+}
+
+.sidebar a:hover {
+  color: #ffcc00 !important; /* optional highlight color */
 }
