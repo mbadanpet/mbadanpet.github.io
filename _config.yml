@@ -6,7 +6,7 @@ baseurl: ""
 repository: mbadanpet/mbadanpet.github.io
 
 # Theme (remote)
-remote_theme: "mmistakes/minimal-mistakes@4.24.0"
+remote_theme: "qwtel/hydejack"
 
 # Build settings
 markdown: kramdown
