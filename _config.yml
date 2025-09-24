@@ -16,7 +16,8 @@ menu:
     url: /about/
 
 # Theme (remote)
-remote_theme: "qwtel/hydejack"
+remote_theme: "mmistakes/minimal-mistakes@latest"
+theme: null
 
 accent_image: /assets/images/header.jpg   
 accent_color: "rgb(79,177,186)"          
