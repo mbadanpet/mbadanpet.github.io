@@ -1,21 +1,10 @@
 title: "Madhulika Badanpet"
 name: "Madhulika Badanpet"
 description: "Sr. Client Systems Engineer @ Snowflake, driving innovation in enterprise IT by combining Windows endpoint automation, Zero Trust security, and data-driven insights to transform modern endpoint management and IT operations at scale."
-url: "https://mbadanpet.github.io"  
-baseurl: ""                           
+url: "https://mbadanpet.github.io"
+baseurl: ""
 repository: mbadanpet/mbadanpet.github.io
 
-menu:
-  - title: "Blog"
-    url: /
-  - title: "Categories"
-    url: /categories/
-  - title: "Tags"
-    url: /tags/
-  - title: "About"
-    url: /about/
-
-# Theme (remote)
 remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 theme: null
 minimal_mistakes_skin: "air"   # options: default, air, aqua, dark, dirt, neon, mint, plum, sunrise
@@ -27,17 +16,17 @@ permalink: /:categories/:title/
 paginate: 5
 paginate_path: /page:num/
 
-# Plugins (all supported by GitHub Pages)
+# Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-include-cache
   - jekyll-paginate
 
-# Author profile (shows on About page and sidebar if enabled)
+# Author profile
 author:
   name: "Madhulika Badanpet"
-  avatar: "/assets/images/avatar.jpg"   # optional
+  avatar: "/assets/images/avatar.jpg"
   bio: "Sr. Client Systems Engineer @ Snowflake, driving innovation in enterprise IT by combining endpoint automation, Zero Trust, and data-driven insights to transform modern endpoint management and IT operations at scale."
   location: "USA"
   links:
@@ -48,7 +37,7 @@ author:
       icon: "fab fa-github"
       url: "https://github.com/mbadanpet"
 
-# Taxonomies
+# Archives
 category_archive:
   type: liquid
   path: /categories/
@@ -56,7 +45,7 @@ tag_archive:
   type: liquid
   path: /tags/
 
-# Navigation (uses _data/navigation.yml)
+# Collections
 collections:
   pages:
     output: true
@@ -64,7 +53,7 @@ collections:
   posts:
     output: true
 
-# Defaults (front matter fallbacks)
+# Defaults for posts
 defaults:
   - scope:
       path: ""
@@ -74,8 +63,8 @@ defaults:
       author_profile: true
       read_time: true
       share: true
-      comments: false  # can enable if you add a provider
-      
+      comments: false
+
 sass:
   style: compressed
 
