@@ -20,9 +20,6 @@ remote_theme: "mmistakes/minimal-mistakes@latest"
 theme: null
 minimal_mistakes_skin: "air"   # options: default, air, aqua, dark, dirt, neon, mint, plum, sunrise
 
-accent_image: /assets/images/header.jpg   
-accent_color: "rgb(79,177,186)"          
-
 # Build settings
 markdown: kramdown
 highlighter: rouge
