@@ -1,9 +1,11 @@
 ---
 layout: single
-title: "My First Blog Post"
-date: 2025-09-22
-categories: [general]
-tags: [intro, test]
+title: "Validating Gorilla Deployments with Fleet + osquery"
+categories: [endpoint-automation]
+tags: [gorilla, fleet, osquery, windows]
+author_profile: true
+read_time: true
+toc: true
+toc_sticky: true
 ---
-
-This is my first post on the new blog! 🚀  
+Content
