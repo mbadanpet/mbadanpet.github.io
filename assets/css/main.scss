@@ -1,0 +1,107 @@
+---
+# Jekyll needs front matter to compile this SCSS
+---
+
+/* Load the theme (choose your skin), then override */
+@import "minimal-mistakes/skins/air";  /* match _config.yml skin */
+@import "minimal-mistakes";
+
+/* =========================================
+   Unified Typography — single font everywhere
+   ========================================= */
+
+/* 1) Global font family (body + headings + UI) */
+:root {
+  --font-sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, "Noto Sans", "Liberation Sans",
+               sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+html, body {
+  font-family: var(--font-sans) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2) Make all headings use the same family and predictable weights */
+h1, h2, h3, h4, h5, h6,
+.site-title, .page__title, .archive__item-title,
+.nav__list, .greedy-nav, .author__content,
+.sidebar, .page__lead, .page__meta,
+a, button, input, select, textarea {
+  font-family: var(--font-sans) !important;
+}
+
+/* 3) Clean, consistent heading sizes (responsive via clamp) */
+h1, .page__title {
+  font-weight: 800;
+  line-height: 1.15;
+  font-size: clamp(1.8rem, 2.2vw + 1rem, 2.8rem);
+  letter-spacing: 0.1px;
+}
+h2 { 
+  font-weight: 700;
+  line-height: 1.2;
+  font-size: clamp(1.5rem, 1.6vw + 0.9rem, 2.1rem);
+}
+h3 { 
+  font-weight: 700;
+  line-height: 1.3;
+  font-size: clamp(1.25rem, 1.1vw + 0.9rem, 1.6rem);
+}
+h4 { 
+  font-weight: 600;
+  line-height: 1.35;
+  font-size: 1.1rem;
+}
+h5 { 
+  font-weight: 600;
+  font-size: 1rem;
+  text-transform: none;
+}
+h6 { 
+  font-weight: 600;
+  font-size: 0.95rem;
+  letter-spacing: 0.2px;
+}
+
+/* 4) Body text and meta */
+body {
+  font-size: 1rem;             /* base size */
+  line-height: 1.7;
+}
+.page__lead {                  /* lead paragraph under page titles */
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
+/* 5) Navigation / masthead */
+.greedy-nav a,
+.masthead__menu-item a {
+  font-weight: 600;
+  letter-spacing: 0.2px;
+}
+
+/* 6) Post titles in lists and cards */
+.archive__item-title {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* 7) Author/profile widgets */
+.author__content .author__name { 
+  font-weight: 800;
+  font-size: 1.15rem;
+}
+.author__bio { 
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+/* 8) Code blocks keep a monospaced font (optional).
+   Remove this block if you want *everything* in Inter, including code. */
+pre, code, kbd, samp {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+               "Liberation Mono", "Courier New", monospace !important;
+  font-size: 0.95em;
+}
