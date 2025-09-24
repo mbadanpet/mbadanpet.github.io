@@ -35,3 +35,48 @@ pre, code, kbd, samp {
   margin-top: 0.5rem;
   font-size: 2rem;
 }
+
+/* === About page layout balance === */
+/* Put the single-page layout into a neat two-column grid */
+.layout--single .page {
+  display: grid;
+  grid-template-columns: minmax(220px, 260px) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+/* Make the author sidebar compact and sticky */
+.layout--single .sidebar {
+  max-width: 260px;
+  position: sticky;
+  top: 2rem;
+}
+
+/* Content column sizing and rhythm */
+.layout--single .page__content {
+  max-width: 900px;
+  margin: 0;            /* grid handles centering now */
+}
+
+/* Title size and spacing (keeps your unified font) */
+.layout--single .page__title {
+  margin-top: 0.25rem;
+  margin-bottom: 0.8rem;
+  line-height: 1.15;
+  font-size: clamp(1.8rem, 2.2vw + 1rem, 2.6rem);
+}
+
+/* Sidebar text left-aligned and tidy */
+.author__content { text-align: left; }
+
+/* Avatar: ensure it renders as a centered circle even if the image isn't */
+.author__avatar img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+}
+
+/* Optional: tighten the meta below the avatar */
+.author__bio { line-height: 1.55; }
