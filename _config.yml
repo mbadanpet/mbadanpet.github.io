@@ -79,6 +79,4 @@ defaults:
 sass:
   style: compressed
 
-assets:
-  sources:
-    - assets/css
+breadcrumbs: true
