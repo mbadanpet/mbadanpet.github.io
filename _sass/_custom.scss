@@ -78,5 +78,28 @@ pre, code, kbd, samp {
   display: block;
 }
 
+/* Replace footer background */
+.page__footer {
+  background: url("/assets/images/footer.jpg") center center/cover no-repeat;
+  color: #fff; /* keeps text readable */
+}
+
+/* Optional: overlay gradient for better text contrast */
+.page__footer::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.55);
+  z-index: 0;
+}
+
+.page__footer * {
+  position: relative;
+  z-index: 1;
+}
+
 /* Optional: tighten the meta below the avatar */
 .author__bio { line-height: 1.55; }
