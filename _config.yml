@@ -16,7 +16,7 @@ menu:
     url: /about/
 
 # Theme (remote)
-remote_theme: "mmistakes/minimal-mistakes@latest"
+remote_theme: "mmistakes/minimal-mistakes@4.24.0"
 theme: null
 minimal_mistakes_skin: "air"   # options: default, air, aqua, dark, dirt, neon, mint, plum, sunrise
 
